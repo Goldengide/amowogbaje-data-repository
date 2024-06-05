@@ -1,0 +1,28 @@
+{
+    "name": "amowogbaje/database-repository",
+    "description": "A repository for database backup and seeding operations.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gideon Amowogbaje",
+            "email": "amowogbajegideon@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Amowogbaje\\DatabaseRepository\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amowogbaje\\DatabaseRepository\\DatabaseRepositoryServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=7.3",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    }
+}
