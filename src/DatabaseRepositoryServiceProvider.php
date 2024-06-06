@@ -18,7 +18,7 @@ class DatabaseRepositoryServiceProvider extends ServiceProvider
         // Code to run when the package is booted
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \YourVendor\DatabaseRepository\Console\Commands\BackupDataCommand::class,
+                \Amowogbaje\DatabaseRepository\Console\Commands\BackupDataCommand::class,
             ]);
         }
         $this->publishes([
