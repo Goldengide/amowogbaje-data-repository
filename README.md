@@ -16,8 +16,7 @@ $ composer require amowogbaje/database-repository
 
 To publish the custom `DatabaseSeeder` class to your application's `database/seeders` directory, run:
 ```bash
-$ php artisan vendor:publish --provider="Amowogbaje\DatabaseRepository\DatabaseRepositoryServiceProvider"
-
+$ php artisan vendor:publish --tag=amowogbaje-seeder --force
 ```
 Note: This will override the default DatabaseSeeder with the one provided by this package.
 
