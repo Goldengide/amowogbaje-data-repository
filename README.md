@@ -14,7 +14,7 @@ $ composer require amowogbaje/database-repository
 
 ## Publish the Seeder
 
-To publish the custom `DatabaseSeeder` class to your application's `database/seeders` directory, run:
+To successfully seed when migrating you need to publish the custom `DatabaseSeeder` class to your application's `database/seeders` directory, run:
 ```bash
 $ php artisan vendor:publish --tag=amowogbaje-seeder --force
 ```
