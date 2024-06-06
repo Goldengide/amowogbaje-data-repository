@@ -20,9 +20,9 @@ class DatabaseRepositoryServiceProvider extends ServiceProvider
                 \Amowogbaje\DatabaseRepository\Console\Commands\BackupDataCommand::class,
             ]);
 
-            $this->publishes([
-                __DIR__.'/../database/seeders/DatabaseSeeder.php' => database_path('seeders/DatabaseSeeder.php'),
-            ], 'amowogbaje-seeder');
+            // $this->publishes([
+            //     __DIR__.'/../database/seeders/DatabaseSeeder.php' => database_path('seeders/DatabaseSeeder.php'),
+            // ], 'amowogbaje-seeder');
         }
     }
 }

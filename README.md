@@ -12,13 +12,7 @@ You can install the package via Composer:
 $ composer require amowogbaje/database-repository
 ```
 
-## Publish the Seeder
 
-To successfully seed when migrating you need to publish the custom `DatabaseSeeder` class to your application's `database/seeders` directory, run:
-```bash
-$ php artisan vendor:publish --tag=amowogbaje-seeder --force
-```
-Note: This will override the default DatabaseSeeder with the one provided by this package.
 
 ## Usage
 
@@ -27,6 +21,31 @@ php artisan data:backup
 ```
 
 ## Migrating with Seeding Data
+
+Your `DatabaseSeeder.php` should look like this;
+```
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+use Amowogbaje\DatabaseRepository\DataRepository;
+
+class DatabaseSeeder extends Seeder
+{
+    public function run()
+    {
+        $seed = new DataRepository;
+        $tableArray = $seed->getAllTablesInADB();
+        foreach ($tableArray as $table) {
+            $seed->setTableName($table);
+            $seed->dataTableSeederFunction();
+        }
+    }
+}
+
+```
 
 Anytime you migrate remember to put --seed at the end, it will look like you never dropped the table
 
